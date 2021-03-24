@@ -1,0 +1,93 @@
+@import url(node_modules/normalize.css/normalize.css);
+@import url(_variables.scss);
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+
+$orange: #ffc107;
+$grey: #48504e;
+$lightGrey: #d4d4d3;
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Roboto", Arial, serif;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $orange;
+  background-image: url(./assets/bgc.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.heading-container {
+  position: relative;
+  display: inline-block;
+  &__h1 {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 3.7rem;
+    padding: 3.5rem;
+    margin: 4rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-top-left-radius: 2rem;
+    &--special {
+      color: $orange;
+    }
+  }
+}
+
+.heading-container__h3 {
+  position: absolute;
+  bottom: -10%;
+  right: 0;
+  background-color: $grey;
+  display: inline-block;
+  color: #fff;
+  padding: 1.5rem;
+  font-size: 3rem;
+}
+
+.article__paragraph {
+  font-size: 2.4rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.55;
+}
+
+.article__heading {
+  background-color: $grey;
+  display: inline-block;
+  color: #fff;
+  padding: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.paragraph-container {
+  display: flex;
+  font-size: 1.8rem;
+  line-height: 1.55;
+  font-weight: 300;
+  & p {
+    margin: 20px;
+  }
+}
+
+.header {
+  display: none;
+}
+// .navigation {
+//   display: flex;
+//   &__list {
+//     font-size: 2.3rem;
+//     line-height: 1.75;
+//   }
+// }

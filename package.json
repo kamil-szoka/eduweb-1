@@ -4,11 +4,13 @@
   "description": "Simple layout exercise",
   "main": "index.js",
   "scripts": {
+    "sass": "npx node-sass -w main.scss style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Kamil Szoka",
   "license": "ISC",
   "dependencies": {
+    "node-sass": "^5.0.0",
     "normalize.css": "^8.0.1"
   }
 }
