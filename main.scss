@@ -19,6 +19,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-attachment: fixed;
+  // height: 300vh;
 }
 
 *,
@@ -27,9 +28,22 @@ body {
   box-sizing: inherit;
 }
 
+.section {
+  width: 50%;
+  min-width: 600px;
+  max-width: 850px;
+  position: absolute;
+  right: 5%;
+}
+
+.article {
+  margin-bottom: 8rem;
+}
 .heading-container {
+  margin-left: -25%;
   position: relative;
   display: inline-block;
+  // right: -38%;
   &__h1 {
     display: inline-block;
     font-weight: 300;
@@ -42,6 +56,23 @@ body {
       color: $orange;
     }
   }
+}
+
+.menu {
+  position: fixed;
+  right: 0;
+  color: #000;
+  font-size: 4rem;
+  // background-color: #fff;
+  display: block;
+  text-align: right;
+  margin: 1rem;
+  width: 6rem;
+  height: 6rem;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  z-index: 9999;
 }
 
 .heading-container__h3 {
@@ -60,6 +91,9 @@ body {
   font-style: italic;
   font-weight: 300;
   line-height: 1.55;
+  &--special {
+    font-weight: bold;
+  }
 }
 
 .article__heading {
@@ -69,6 +103,39 @@ body {
   padding: 1.5rem;
   font-size: 2.5rem;
   font-weight: 300;
+}
+
+em {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.article__heading-special {
+  text-decoration: line-through;
+}
+
+.article__link {
+  display: inline-block;
+  border: 1px dashed black;
+  font-size: 3rem;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  right: 0;
+}
+
+figure {
+  position: absolute;
+  left: -30%;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  color: white;
+  background-color: $grey;
+  margin: 1rem auto;
 }
 
 .paragraph-container {
@@ -84,6 +151,14 @@ body {
 .header {
   display: none;
 }
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+  background: white;
+}
 // .navigation {
 //   display: flex;
 //   &__list {
@@ -91,3 +166,41 @@ body {
 //     line-height: 1.75;
 //   }
 // }
+
+// RAMKA //
+html:before,
+html:after,
+body:before,
+body:after {
+  content: "";
+  background: white;
+  position: fixed;
+  display: block;
+  z-index: 5;
+}
+
+/* ...and position them! */
+html:before {
+  height: 15px;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+html:after {
+  width: 15px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+body:before {
+  height: 15px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+body:after {
+  width: 15px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
