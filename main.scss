@@ -204,3 +204,41 @@ body:after {
   bottom: 0;
   left: 0;
 }
+
+@media all and (max-width: 1280px) {
+  html {
+    background: #ffc107;
+  }
+  .section {
+    width: 75%;
+  }
+  .bg {
+    background-color: $orange;
+    background-image: url(./assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 30rem;
+    width: 100%;
+  }
+  .menu {
+    top: 0;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .heading-container {
+    margin: 0;
+  }
+  figure {
+    display: none;
+  }
+  .section {
+    width: 90%;
+    min-width: 300px;
+    right: 5%;
+  }
+  .paragraph-container {
+    display: block;
+  }
+}
