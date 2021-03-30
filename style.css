@@ -122,13 +122,6 @@ figure {
   .paragraph-container p {
     margin: 20px; }
 
-.header__navigation {
-  display: none;
-  height: 300px; }
-
-.navigation--open {
-  display: block; }
-
 .footer {
   position: fixed;
   right: 0;
