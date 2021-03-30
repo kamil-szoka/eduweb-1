@@ -1,5 +1,4 @@
 @import url(node_modules/normalize.css/normalize.css);
-@import url(_variables.scss);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
 html {
   box-sizing: border-box;
@@ -47,6 +46,7 @@ body {
 .menu {
   position: fixed;
   right: 0;
+  top: 0;
   color: #000;
   font-size: 4rem;
   display: block;
@@ -57,7 +57,8 @@ body {
   background-color: white;
   padding: 1rem;
   text-align: center;
-  z-index: 9999; }
+  z-index: 9999;
+  cursor: pointer; }
 
 .heading-container__h3 {
   position: absolute;
@@ -121,8 +122,12 @@ figure {
   .paragraph-container p {
     margin: 20px; }
 
-.header {
-  display: none; }
+.header__navigation {
+  display: none;
+  height: 300px; }
+
+.navigation--open {
+  display: block; }
 
 .footer {
   position: fixed;
@@ -165,6 +170,13 @@ body:after {
   top: 0;
   bottom: 0;
   left: 0; }
+
+@media all and (min-width: 1920px) {
+  .section {
+    width: 100%;
+    min-width: 600px;
+    position: absolute;
+    right: 10%; } }
 
 @media all and (max-width: 1280px) {
   html {

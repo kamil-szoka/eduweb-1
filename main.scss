@@ -1,5 +1,4 @@
 @import url(node_modules/normalize.css/normalize.css);
-@import url(_variables.scss);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
 
 $orange: #ffc107;
@@ -61,6 +60,7 @@ body {
 .menu {
   position: fixed;
   right: 0;
+  top: 0;
   color: #000;
   font-size: 4rem;
   // background-color: #fff;
@@ -73,6 +73,7 @@ body {
   padding: 1rem;
   text-align: center;
   z-index: 9999;
+  cursor: pointer;
 }
 
 .heading-container__h3 {
@@ -148,8 +149,16 @@ figure {
   }
 }
 
-.header {
+.header__navigation {
   display: none;
+  height: 300px;
+}
+
+.navigation--open {
+  display: block;
+  // height: 200px;
+  // color: white;
+  // background-color: gray;
 }
 
 .footer {
@@ -203,6 +212,16 @@ body:after {
   top: 0;
   bottom: 0;
   left: 0;
+}
+
+@media all and (min-width: 1920px) {
+  .section {
+    width: 100%;
+    min-width: 600px;
+    // max-width: 850px;
+    position: absolute;
+    right: 10%;
+  }
 }
 
 @media all and (max-width: 1280px) {
